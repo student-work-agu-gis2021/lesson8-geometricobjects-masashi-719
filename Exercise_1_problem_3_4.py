@@ -12,6 +12,7 @@
 #raise NotImplementedError()
 import pandas as pd 
 
+
 #Check how many rows and columns there are:
 data
 
@@ -26,6 +27,7 @@ print(data.head())
 
 # YOUR CODE HERE 2 to set `data`
 
+
 # CODE FOR TESTING YOUR SOLUTION
 print(list(data.columns))
 
@@ -34,6 +36,7 @@ print(list(data.columns))
 # 
 
 # YOUR CODE HERE 3 to define empty lists orig_points and dest_points
+
 
 # CODE FOR TESTING YOUR SOLUTION
 
