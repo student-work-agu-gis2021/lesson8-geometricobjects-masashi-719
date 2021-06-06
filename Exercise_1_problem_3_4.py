@@ -129,7 +129,9 @@ print('lines length:', len(lines))
 # YOUR CODE HERE 6 to append LineString to lines
 #raise NotImplementedError()
 from shapely.geometry import LineString
-
+# add Alternative 1 of 2a
+for i in range(len(orig_points)):
+  lines.append(LineString([orig_points[i],dest_points[i]]))
 # CODE FOR TESTING YOUR SOLUTION
 
 #Test that the list has correct number of LineStrings
@@ -142,7 +144,9 @@ assert len(lines) == len(data), "There should be as many lines as there are rows
 # 
 
 # YOUR CODE HERE 7 to find total length
-
+total_length=0
+for l in lines:
+  total_length+=l.length
 # CODE FOR TESTING YOUR SOLUTION
 
 # This test print should print the total length of all lines
@@ -159,7 +163,19 @@ print("Total length of all lines is", round(total_length, 2))
 # **Note: avoid using the same variable names as earlier inside your functions!** Functions are often defined at the top of the script file (or jupyter notebook), and now that we have them here at the very end you might accidentally alter an existing variable inside your functions. To avoid this, alter the variable names inside your own functions if you re-use code from this notebook. 
 
 # YOUR CODE HERE 8 to define create_od_lines() and calculate_total_distance()
+def create_od_lines(oring_points,dest_points):
+  lines=[]
+  for i in range(len(oring_points)):
+    # Add length
+    lines.append(LineString([oring_points[i],dest_points[i]]))
+  return lines
 
+def calculate_total_distance(od_lines):
+  total_distance=0
+  # Add length
+  for i in od_lines:
+    total_distance+=i.length
+  return total_distance
 
 # CODE FOR TESTING YOUR SOLUTION
 
