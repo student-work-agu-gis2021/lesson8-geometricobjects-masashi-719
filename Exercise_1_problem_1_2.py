@@ -37,7 +37,7 @@ def create_line_geom(points):
   # add the condition and the output
   assert type(points)==list, "Input should be a list!"
   assert len(points) >= 2, "LineString object requires at least two Points!"
-  assert type(points[0])==tuple,"All list values should be coordinate tuples!"
+  assert type(points[0])==tuple,"All list values should be Shapely Point objects!"
   line = LineString(points)
   return line
 # Demonstrate the usage of your function; For example, create a line object with two points: `Point(45.2, 22.34)` & `Point(100.22, -3.20)` and store the result in a variable called `line1`:

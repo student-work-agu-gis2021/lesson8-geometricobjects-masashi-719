@@ -108,7 +108,8 @@ assert len(dest_points) == len(data), "Number of destination points must be the 
 # 
 
 # YOUR CODE HERE 5
-
+# create list
+lines=[]
 
 # CODE FOR TESTING YOUR SOLUTION
 
